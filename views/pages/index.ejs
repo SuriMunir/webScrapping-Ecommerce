@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('../partials/header'); %></header>
+
+    <main>
+      <div class="jumbotron">
+        <h1>This is backend of web scrapping app</h1>
+        <p>
+          This app scrappes amazon, flipkart and snapdeal for following
+          electronics products
+        </p>
+        <ul>
+          <li>iphone 12</li>
+          <li>iphone 11</li>
+          <li>samsung m13</li>
+          <li>samsung galaxy tab a8</li>
+          <li>ipad mini</li>
+          <li>ipad pro</li>
+          <li>boat airdopes</li>
+          <li>vivo y21</li>
+          <li>redmi note 10</li>
+          <li>oppo a15</li>
+        </ul>
+        <h3>Scrapping Approach And Scheduling</h3>
+        <p>
+          Scrapping is done on application start. Post this it is repeated every
+          12 hours using a cron job
+        </p>
+        <br />
+        <br />
+        <br />
+        <h4>API End Points For Viewing Scrapped Data</h4>
+        <p>
+          Get Request on <code>/api/products</code> will send all scrapped data
+        </p>
+        <p>
+          Get Request with a search query on products
+          <code>/api/products/search?products=iphone+12</code> will send all
+          products matching the product
+        </p>
+      </div>
+    </main>
+
+    <footer><%- include('../partials/footer'); %></footer>
+  </body>
+</html>
